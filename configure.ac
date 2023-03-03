@@ -205,6 +205,11 @@ case $host in
     AC_DEFINE([LINUX], [1], [Define if the operating system is LINUX])
     PLATFORM="HURD"
     ;;
+ *-*-cygwin*)
+    echo "Checking platform... Identified as CYGWIN, treating as windows"
+    AC_DEFINE([CYGWIN], [1], [Define if the operating system is WIN32])
+    PLATFORM="WIN32"
+    ;;
        *)
     echo "Unknown CANONICAL_HOST $host"
     exit 1
