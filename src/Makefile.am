@@ -134,6 +134,7 @@ ACTIONS = \
 	actions/disruptive/redirect.cc \
 	actions/disruptive/pass.cc \
 	actions/exec.cc \
+	actions/expire_var.cc \
 	actions/init_col.cc \
 	actions/log.cc \
 	actions/log_data.cc \
@@ -259,6 +260,7 @@ UTILS = \
 
 COLLECTION = \
 	collection/collections.cc \
+	collection/backend/collection_data.cc \
 	collection/backend/in_memory-per_process.cc \
 	collection/backend/lmdb.cc
 
@@ -309,7 +311,7 @@ libmodsecurity_la_CFLAGS =
 
 
 libmodsecurity_la_CPPFLAGS = \
-	-std=c++11 \
+	-std=c++17 \
 	-I.. \
 	-g \
 	-I../others \
